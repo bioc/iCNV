@@ -58,16 +58,18 @@ Variants BAF(vcf) PLR                                         |      Array LRR  
 
 ```r
 ## try http:// if https:// URLs are not supported
-source("https://bioconductor.org/biocLite.R")
-biocLite("CODEX")
+if (!requireNamespace("BiocManager", quietly=TRUE))
+    install.packages("BiocManager")
+BiocManager::install("CODEX")
 ```
   
   Install `iCNV` from Bioconductor:
 
 ```r
 ## try http:// if https:// URLs are not supported
-source("https://bioconductor.org/biocLite.R")
-biocLite("iCNV")
+if (!requireNamespace("BiocManager", quietly=TRUE))
+    install.packages("BiocManager")
+BiocManager::install("iCNV")
 ```
   
   Install the current release from Github:

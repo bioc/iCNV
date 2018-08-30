@@ -15,8 +15,9 @@ Please comment on the *Issues* section for addtional questions.
 * Install from GitHub
 ```r
 # try http:// if https:// URLs are not supported
-source("https://bioconductor.org/biocLite.R")
-biocLite("CODEX")
+if (!requireNamespace("BiocManager", quietly=TRUE))
+    install.packages("BiocManager")
+BiocManager::install("CODEX")
 
 # Install iCNV
 install.packages("devtools")
